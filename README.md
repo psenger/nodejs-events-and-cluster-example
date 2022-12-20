@@ -1,5 +1,7 @@
 # Example of NodesJS Cluster
 
+> Two examples of NodeJS Clustering. First, sending messages and the second is about respawning.
+
 ## Example 1: messages to cluster of children
 
 1. Event Emitter is created in `Master` Process

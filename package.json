@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-events-and-cluster-example",
+  "version": "1.0.0",
+  "description": "## Example 1: messages to cluster of children",
+  "main": "utils.js",
+  "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start-respawn": "node ./respawn/index.js",
+    "start-message": "node ./messages/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psenger/nodejs-events-and-cluster-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psenger/nodejs-events-and-cluster-example/issues"
+  },
+  "homepage": "https://github.com/psenger/nodejs-events-and-cluster-example#readme"
+}
