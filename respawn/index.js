@@ -21,6 +21,7 @@ if (cluster.isMaster) {
     })
     cluster.on('exit', (deadWorker, code, signal) => {
         const [ , processEnv ] = workers[deadWorker.process.pid]
+        delete workers[deadWorker.process.pid] // wow, I forgot to add this. Without, it is a memory leak
         console.error( `Worker "${deadWorker.process.pid}" died with code="${code}" signal="${signal}" env="${JSON.stringify(processEnv)}"`)
         const worker = cluster.fork( processEnv )
         workers[worker.process.pid] = [ worker, processEnv ]
